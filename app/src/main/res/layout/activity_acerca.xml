@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Acerca"
+    android:id="@+id/activity_acerca"
+    android:background="#ffffff"
+    android:padding="5dp">
+    <TextView
+        android:text=" MISION:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/textView"
+        android:textColor="#8A4B08"
+        android:textSize="30dp"
+        />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:text="  Brindar el mejor servicio a nuestros clientes."
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mision"
+        android:textColor="#A8F952"
+        android:textSize="16dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+
+        android:text=" Vision:"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/vision"
+        android:layout_below="@+id/mision"
+        android:layout_centerHorizontal="true"
+        android:textColor="#8A4B08"
+        android:textSize="30dp"
+        />
+
+    <TextView
+        android:text="Ser el mejor recinto cosmetologico."
+        android:layout_width="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:id="@+id/datosvision"
+        android:textColor="#A8F952"
+        android:textSize="16dp"
+        android:layout_below="@+id/vision"/>
+    <Button
+        android:layout_marginTop="40dp"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/datosvision"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonLLAMAR"
+        android:text="LLAMAR"
+        android:background="#D0F5A9"/>
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/buttonLLAMAR"
+        android:scaleType="fitXY"
+        android:src="@drawable/icono"
+        android:layout_margin="3dp"/>
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Promo">
+    <TextView
+        android:text=" Descuentos:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/textView"
+        android:textColor="#8A4B08"
+        android:textSize="30dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:text="50% Masage para toda la familia\n10% Depilacion de bikini\n10% Depilacion de axila\n10% Depilacion de bigote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/Promos"
+        android:textColor="#A8F952"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_below="@+id/textView"/>
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Promos"
+        android:scaleType="fitXY"
+        android:src="@drawable/icono"
+        android:layout_margin="3dp"/>
+</RelativeLayout>
