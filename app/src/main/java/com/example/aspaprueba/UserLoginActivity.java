@@ -11,7 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import java.util.HashMap;
 
 public class UserLoginActivity extends AppCompatActivity {
@@ -44,7 +45,31 @@ public class UserLoginActivity extends AppCompatActivity {
 
                 if(CheckEditText){
 
-                    UserLoginFunction(EmailHolder, PasswordHolder);
+                    //UserLoginFunction(EmailHolder, PasswordHolder);
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(UserLoginActivity.this);
+                    builder.setTitle("Confirmación");
+                    builder.setMessage("¿Estás seguro que quieres ingresar al sistema?");
+                    builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            // Continuar con el intent
+                            Intent intent = new Intent(UserLoginActivity.this, DashboardActivity.class);
+                            intent.putExtra(UserEmail, "email");
+                            startActivity(intent);
+                        }
+                    });
+                    builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            // Mostrar un Toast si el usuario elige "No"
+                            Toast.makeText(UserLoginActivity.this, "Asegúrate de que tus credenciales estén correctas", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+                    // Mostrar el cuadro de diálogo
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
 
                 }
                 else {
